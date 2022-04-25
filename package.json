@@ -1,0 +1,21 @@
+{
+  "name": "blackbox",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "index.js",
+  "repository": "https://github.com/Junnyyy/Blackbox.git",
+  "author": "Johnny <44646589+Junnyyy@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "start:dev": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.27",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
