@@ -16,28 +16,12 @@ export const ping: Command = {
       Date.now() - interaction.createdTimestamp
     } ms`;
 
-    // Alternative Embeded (Triggers typescript errors)
-    // const returnMessage = {
-    //   color: "ffeded",
-    //   title: `**Pong** 🏓`,
-    //   description: output,
-    //   timestamp: new Date(),
-    //   footer: {
-    //     text: user.tag,
-    //     icon_url: user.displayAvatarURL(),
-    //   },
-    // };
-
     const returnMessage = new MessageEmbed()
       .setColor("#ffeded")
       .setTitle(`**Pong** 🏓`)
       .setDescription(output)
       .setTimestamp()
       .setFooter(`${user.tag}`, `${user.avatarURL({ format: "png" })}`);
-    // returnMessage.setAuthor({
-    //   name: user.tag,
-    //   iconURL: user.displayAvatarURL(),
-    // });
 
     await interaction.editReply({ embeds: [returnMessage] });
   },
