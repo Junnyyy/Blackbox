@@ -30,9 +30,9 @@ GUILD_ID = "Your guild ID here"
 ```
 yarn run start:dev
 ```
-- Production
+- Start locally
 ```
-Not ready yet
+yarn start
 ```
 
 ## Technologies 📡
