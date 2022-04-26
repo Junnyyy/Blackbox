@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { MessageEmbed } from "discord.js";
 import { Command } from "../interfaces/Command";
+import { createEmbeded } from "../helpers/embeded";
 
 export const ping: Command = {
   data: new SlashCommandBuilder()
@@ -10,18 +10,13 @@ export const ping: Command = {
     await interaction.deferReply();
     const { user } = interaction;
 
-    let output: string = `**Gateway:** Online ✅`;
-    output += `\n**Websocket Latency:** ${interaction.client.ws.ping} ms`;
-    output += `\n**API Latency:** ${
+    let message: string = `**Gateway:** Online ✅`;
+    message += `\n**Websocket Latency:** ${interaction.client.ws.ping} ms`;
+    message += `\n**API Latency:** ${
       Date.now() - interaction.createdTimestamp
     } ms`;
 
-    const returnMessage = new MessageEmbed()
-      .setColor("#ffeded")
-      .setTitle(`**Pong** 🏓`)
-      .setDescription(output)
-      .setTimestamp()
-      .setFooter(`${user.tag}`, `${user.avatarURL({ format: "png" })}`);
+    const returnMessage = createEmbeded("**Pong** 🏓", message, user);
 
     await interaction.editReply({ embeds: [returnMessage] });
   },
