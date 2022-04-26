@@ -26,7 +26,7 @@ GUILD_ID = "Your guild ID here"
 
 3. Start Application
 - To start as developer
-(Uses ts-node-dv)
+(Uses ts-node-dev)
 ```
 yarn run start:dev
 ```
