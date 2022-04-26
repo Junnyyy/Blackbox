@@ -1,10 +1,20 @@
 import { Client } from "discord.js";
+import { IntentOptions } from "./config/IntentOptions";
+import { onInteraction } from "./events/onInteraction";
+import { onReady } from "./events/onReady";
+import { validateEnv } from "./utils/validateEnv";
+require("dotenv").config();
 
-console.log("Bot is starting...");
+(async () => {
+  if (!validateEnv()) return;
+  const client = new Client({ intents: IntentOptions });
 
-const client = new Client({
-    intents: []
-});
+  client.on("ready", async () => await onReady(client));
 
-console.log(client);
-console.log("hello");
+  client.on(
+    "interactionCreate",
+    async (interaction) => await onInteraction(interaction)
+  );
+
+  await client.login(process.env.token);
+})();
