@@ -12,11 +12,11 @@ export const help: Command = {
 
     const helpEmbed = new MessageEmbed()
       .setColor("#ffeded")
-      .setTitle("Help!")
+      .setTitle("**Help** ⛑")
       .setDescription(config.about)
       .addField(
-        "Ping",
-        "To check the current ping to the discord API use `/ping`."
+        "Ping 🏓",
+        "To view the current Websocket & Discord API ping use `/ping`."
       )
       .setTimestamp()
       .setFooter(
