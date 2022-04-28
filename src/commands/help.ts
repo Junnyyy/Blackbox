@@ -19,10 +19,10 @@ export const help: Command = {
         "To view the current Websocket & Discord API ping use `/ping`."
       )
       .setTimestamp()
-      .setFooter(
-        `${client.user?.tag}`,
-        `${client.user?.avatarURL({ format: "png" })}`
-      );
+      .setFooter({
+        text: `${client.user?.tag}`,
+        iconURL: `${client.user?.avatarURL({ format: "png" })}`,
+      });
     // helpEmbed.setFooter({ text: `Version ${process.env.npm_package_version}` });
     await interaction.editReply({ embeds: [helpEmbed] });
     return;

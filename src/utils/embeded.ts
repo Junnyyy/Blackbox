@@ -11,8 +11,8 @@ export function createEmbeded(
     .setTitle(title)
     .setDescription(message)
     .setTimestamp()
-    .setFooter(
-      `${client.user?.tag}`,
-      `${client.user?.avatarURL({ format: "png" })}`
-    );
+    .setFooter({
+      text: `${client.user?.tag}`,
+      iconURL: `${client.user?.avatarURL({ format: "png" })}`,
+    });
 }
