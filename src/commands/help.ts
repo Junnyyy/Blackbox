@@ -8,16 +8,23 @@ export const help: Command = {
     .setDescription("Provides information on using this bot."),
   run: async (interaction, client) => {
     await interaction.deferReply();
-    const helpEmbed = new MessageEmbed();
-    helpEmbed.setTitle("Hi I'm blackbox");
-    helpEmbed.setDescription(
-      "This discord bot is designed to help you manage your server."
-    );
-    helpEmbed.addField(
-      "Ping",
-      "To check the current ping to the discord API use `/ping`."
-    );
-    helpEmbed.setFooter({ text: `Version ${process.env.npm_package_version}` });
+
+    const helpEmbed = new MessageEmbed()
+      .setColor("#ffeded")
+      .setTitle("Help!")
+      .setDescription(
+        "Blackbox is an all-encompassing server management bot. Designed with server staff and user-friendliness in mind."
+      )
+      .addField(
+        "Ping",
+        "To check the current ping to the discord API use `/ping`."
+      )
+      .setTimestamp()
+      .setFooter(
+        `${client.user?.tag}`,
+        `${client.user?.avatarURL({ format: "png" })}`
+      );
+    // helpEmbed.setFooter({ text: `Version ${process.env.npm_package_version}` });
     await interaction.editReply({ embeds: [helpEmbed] });
     return;
   },
