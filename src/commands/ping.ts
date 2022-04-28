@@ -6,7 +6,7 @@ export const ping: Command = {
   data: new SlashCommandBuilder()
     .setName("ping")
     .setDescription("Transmits Websocket latency and ping."),
-  run: async (interaction) => {
+  run: async (interaction, client) => {
     await interaction.deferReply();
     const { user } = interaction;
 
@@ -16,7 +16,7 @@ export const ping: Command = {
       Date.now() - interaction.createdTimestamp
     } ms`;
 
-    const returnMessage = createEmbeded("**Pong** 🏓", message, user);
+    const returnMessage = createEmbeded("**Pong** 🏓", message, user, client);
 
     await interaction.editReply({ embeds: [returnMessage] });
   },

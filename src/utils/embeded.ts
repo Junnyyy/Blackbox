@@ -1,14 +1,18 @@
-import { MessageEmbed, User } from "discord.js";
+import { Client, MessageEmbed, User } from "discord.js";
 
 export function createEmbeded(
   title: string,
   message: string,
-  user: User
+  user: User,
+  client: Client
 ): MessageEmbed {
   return new MessageEmbed()
     .setColor("#ffeded")
     .setTitle(title)
     .setDescription(message)
     .setTimestamp()
-    .setFooter(`${user.tag}`, `${user.avatarURL({ format: "png" })}`);
+    .setFooter(
+      `${client.user?.tag}`,
+      `${client.user?.avatarURL({ format: "png" })}`
+    );
 }

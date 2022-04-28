@@ -13,7 +13,7 @@ require("dotenv").config();
 
   client.on(
     "interactionCreate",
-    async (interaction) => await onInteraction(interaction)
+    async (interaction) => await onInteraction(interaction, client)
   );
 
   await client.login(process.env.TOKEN);
