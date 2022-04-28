@@ -1,10 +1,12 @@
 import { REST } from "@discordjs/rest";
 import { Client } from "discord.js";
-import { Routes } from "discord-api-types/v9";
+import { Routes } from "discord-api-types/v10";
 import { CommandList } from "../commands/_Commandlists";
 
 export const onReady = async (client: Client) => {
-  const rest = new REST({ version: "9" }).setToken(process.env.TOKEN as string);
+  const rest = new REST({ version: "10" }).setToken(
+    process.env.TOKEN as string
+  );
 
   const commandData = CommandList.map((command) => command.data.toJSON());
 
