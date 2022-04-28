@@ -1,6 +1,7 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
 import { MessageEmbed } from "discord.js";
 import { Command } from "../interfaces/Command";
+import config from "../config.json";
 
 export const help: Command = {
   data: new SlashCommandBuilder()
@@ -12,9 +13,7 @@ export const help: Command = {
     const helpEmbed = new MessageEmbed()
       .setColor("#ffeded")
       .setTitle("Help!")
-      .setDescription(
-        "Blackbox is an all-encompassing server management bot. Designed with server staff and user-friendliness in mind."
-      )
+      .setDescription(config.about)
       .addField(
         "Ping",
         "To check the current ping to the discord API use `/ping`."
