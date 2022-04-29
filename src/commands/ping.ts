@@ -11,7 +11,7 @@ export const ping: Command = {
     const { user } = interaction;
 
     let message: string = `**Gateway:** Online ✅`;
-    message += `\n**Websocket Latency:** ${interaction.client.ws.ping} ms`;
+    message += `\n**Websocket Latency:** ${client.ws.ping} ms`;
     message += `\n**API Latency:** ${
       Date.now() - interaction.createdTimestamp
     } ms`;
