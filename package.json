@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "start:dev": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+    "start:dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
   },
   "dependencies": {
     "@discordjs/builders": "^0.13.0",
