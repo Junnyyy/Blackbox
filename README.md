@@ -10,13 +10,13 @@ Node version requirement
 version >= 16.xx.x
 ```
 
-1. Install packages
+###### 1. Install packages
 
 ```
 yarn
 ```
 
-2. Environmental variables
+###### 2. Environmental variables
 
 - create a '.env' file in the source directory
 
@@ -28,7 +28,39 @@ TOKEN = "Discord bot token"
 GUILD_ID = "Your guild ID here"
 ```
 
-3. Start Application
+###### 3. Config files
+
+- Config file is located at [src/config.json](https://github.com/Junnyyy/Blackbox/blob/2aecb39b6342e36852fa101b73ed2b4d9a7ebf28/src/config.json) in JSON format
+
+Object structure
+
+- `"activityType":` The type of activity shown in bot activity status.
+
+   - `(Options: "STREAMING", "WATCHING", "CUSTOM_STATUS", "PLAYING", "COMPETING")`
+
+- `"activityMessage":` The message after activity type. 
+   - `(Options: Any string)`
+
+- `"status":` The status displayed by the bot. 
+   - `(Options: "online", "idle", "invisible", "dnd")`
+
+- `"creatorID":` Discord ID of bot owner. 
+   - `(Options: "Any string of numbers" or empty)`
+
+- `"about":` The about message for any commands that display an about message. 
+   - `(Options: Any string)`
+Example config
+```json
+{
+  "activityType": "WATCHING", 
+  "activityMessage": "the logs ⚡",
+  "status": "dnd",
+  "creatorID": "123456789101112131",
+  "about": "Blackbox is an all-encompassing server management bot. Designed with server staff and user-friendliness in mind."
+}
+```
+
+###### 4. Start Application
 
 - To start as developer
   (Uses ts-node-dev)
@@ -41,6 +73,18 @@ yarn run start:dev
 
 ```
 yarn start
+```
+
+- Build
+
+```
+yarn run build
+```
+
+- Clean Build
+
+```
+yarn run clean
 ```
 
 ## Technologies 📡
