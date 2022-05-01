@@ -49,6 +49,7 @@ Object structure
 
 - `"about":` The about message for any commands that display an about message. 
    - `(Options: Any string)`
+
 Example config
 ```json
 {
