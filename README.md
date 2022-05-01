@@ -10,13 +10,13 @@ Node version requirement
 version >= 16.xx.x
 ```
 
-###### 1. Install packages
+#### 1. Install packages
 
 ```
 yarn
 ```
 
-###### 2. Environmental variables
+#### 2. Environmental variables
 
 - create a '.env' file in the source directory
 
@@ -28,7 +28,7 @@ TOKEN = "Discord bot token"
 GUILD_ID = "Your guild ID here"
 ```
 
-###### 3. Config files
+#### 3. Config files
 
 - Config file is located at [src/config.json](https://github.com/Junnyyy/Blackbox/blob/2aecb39b6342e36852fa101b73ed2b4d9a7ebf28/src/config.json) in JSON format
 
@@ -60,7 +60,7 @@ Example config
 }
 ```
 
-###### 4. Start Application
+#### 4. Start Application
 
 - To start as developer
   (Uses ts-node-dev)
@@ -92,11 +92,13 @@ yarn run clean
 #### Languages
 
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 #### Back-end
 
 ![DiscordJS](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
-
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
+   
 #### Database
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
