@@ -18,6 +18,10 @@ export const help: Command = {
         "Ping 🏓",
         "To view the current Websocket & Discord API ping use `/ping`."
       )
+      .addField(
+        "Stats 📊",
+        "To view the current statistics of the bot use `/stats`.\nOnly available to the bot's owner."
+      )
       .setTimestamp()
       .setFooter({
         text: `${client.user?.tag}`,
