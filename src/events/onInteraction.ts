@@ -1,5 +1,5 @@
 import { Client, Interaction } from "discord.js";
-import { CommandList } from "../commands/_CommandLists";
+import { CommandList } from "../commands/_Commandlists";
 
 export const onInteraction = async (
   interaction: Interaction,

@@ -1,7 +1,7 @@
 import { REST } from "@discordjs/rest";
 import { Client } from "discord.js";
 import { Routes } from "discord-api-types/v10";
-import { CommandList } from "../commands/_CommandLists";
+import { CommandList } from "../commands/_Commandlists";
 const config = require("../config.json");
 
 export const onReady = async (client: Client) => {
