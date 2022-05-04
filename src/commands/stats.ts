@@ -13,17 +13,18 @@ export const stats: Command = {
     const { user } = interaction;
 
     if (user.id === config.creatorID) {
-      let message: string = `• Mem Usage  : ${(
+      let message: string = `• **Mem Usage:** ${(
         process.memoryUsage().heapUsed /
         1024 /
         1024
       ).toFixed(2)} MB`;
-      message += `\n• Uptime: ${convertMS(client.uptime)} `;
-      message += `\n• Users: ${client.users.cache.size.toLocaleString()}`;
-      message += `\n• Servers: ${client.guilds.cache.size.toLocaleString()}`;
-      message += `\n• Channels: ${client.channels.cache.size.toLocaleString()}`;
-      message += `\n• Discord.js: v${version}`;
-      message += `\n• Node: ${process.version}`;
+      message += `\n• **Uptime:** ${convertMS(client.uptime)} `;
+      message += `\n• **Users:** ${client.users.cache.size.toLocaleString()}`;
+      message += `\n• **Servers:** ${client.guilds.cache.size.toLocaleString()}`;
+      message += `\n• **Channels:** ${client.channels.cache.size.toLocaleString()}`;
+      message += `\n• **Application:** v${process.env.npm_package_version}`;
+      message += `\n• **Discord.js:** v${version}`;
+      message += `\n• **Node:** ${process.version}`;
 
       const returnMessage = createEmbeded(
         "**Stats** 📊",
