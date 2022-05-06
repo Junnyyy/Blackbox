@@ -1,7 +1,8 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
 import { MessageEmbed } from "discord.js";
 import { Command } from "../interfaces/Command";
-import config from "../config.json";
+// import config from "../config.json";
+require("dotenv").config();
 
 export const help: Command = {
   data: new SlashCommandBuilder()
@@ -13,7 +14,7 @@ export const help: Command = {
     const helpEmbed = new MessageEmbed()
       .setColor("#ffeded")
       .setTitle("**Help** ⛑")
-      .setDescription(config.about)
+      .setDescription(process.env.ABOUT as string)
       .addField(
         "Ping 🏓",
         "To view the current Websocket & Discord API ping use `/ping`."
