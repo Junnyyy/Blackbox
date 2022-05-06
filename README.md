@@ -26,6 +26,7 @@ yarn
 
 TOKEN = "Discord bot token"
 GUILD_ID = "Your guild ID here"
+CREATORID = "Your ID here"
 ```
 
 #### 3. Config files
@@ -44,9 +45,6 @@ Object structure
 - `"status":` The status displayed by the bot. 
    - `(Options: "online", "idle", "invisible", "dnd")`
 
-- `"creatorID":` Discord ID of bot owner. 
-   - `(Options: "Any string of numbers" or empty)`
-
 - `"about":` The about message for any commands that display an about message. 
    - `(Options: Any string)`
 
@@ -56,7 +54,6 @@ Example config
   "activityType": "WATCHING", 
   "activityMessage": "the logs ⚡",
   "status": "dnd",
-  "creatorID": "123456789101112131",
   "about": "Blackbox is an all-encompassing server management bot. Designed with server staff and user-friendliness in mind."
 }
 ```

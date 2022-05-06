@@ -9,5 +9,10 @@ export const validateEnv = () => {
     return false;
   }
 
+  if (!process.env.CREATORID) {
+    console.warn("Missing Creator ID.");
+    return false;
+  }
+
   return true;
 };

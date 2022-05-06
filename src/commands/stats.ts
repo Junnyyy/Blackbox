@@ -2,7 +2,8 @@ import { SlashCommandBuilder } from "@discordjs/builders";
 import { version } from "discord.js";
 import { Command } from "../interfaces/Command";
 import { createEmbeded } from "../utils/embeded";
-const config = require("../config.json");
+// const config = require("../config.json");
+require("dotenv").config();
 
 export const stats: Command = {
   data: new SlashCommandBuilder()
@@ -12,7 +13,7 @@ export const stats: Command = {
     await interaction.deferReply();
     const { user } = interaction;
 
-    if (user.id === config.creatorID) {
+    if (user.id === process.env.CREATORID) {
       let message: string = `• **Mem Usage:** ${(
         process.memoryUsage().heapUsed /
         1024 /
