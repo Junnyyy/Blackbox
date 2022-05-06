@@ -2,7 +2,6 @@ import { SlashCommandBuilder } from "@discordjs/builders";
 import { version } from "discord.js";
 import { Command } from "../interfaces/Command";
 import { createEmbeded } from "../utils/embeded";
-// const config = require("../config.json");
 require("dotenv").config();
 
 export const stats: Command = {
