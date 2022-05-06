@@ -14,25 +14,5 @@ export const validateEnv = () => {
     return false;
   }
 
-  if (!process.env.ACTIVITYTYPE) {
-    console.warn("Missing default activity type.");
-    return false;
-  }
-
-  if (!process.env.ACTIVITYMESSAGE) {
-    console.warn("Missing default activity message.");
-    return false;
-  }
-
-  if (!process.env.STATUS) {
-    console.warn("Missing default status.");
-    return false;
-  }
-
-  if (!process.env.ABOUT) {
-    console.warn("Missing about message.");
-    return false;
-  }
-
   return true;
 };

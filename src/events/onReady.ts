@@ -3,6 +3,7 @@ import { Client } from "discord.js";
 import { Routes } from "discord-api-types/v10";
 import { CommandList } from "../commands/_Commandlists";
 const config = require("../config.json");
+require("dotenv").config();
 
 export const onReady = async (client: Client) => {
   const rest = new REST({ version: "10" }).setToken(
@@ -23,7 +24,12 @@ export const onReady = async (client: Client) => {
   console.log("✅ Successfully loading (/) commands.");
 
   client.user?.setPresence({
-    activities: [{ type: config.activityType, name: config.activityMessage }],
+    activities: [
+      {
+        type: config.activityType,
+        name: config.activityMessage,
+      },
+    ],
     status: config.status,
   });
   console.log(
