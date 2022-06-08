@@ -37,21 +37,24 @@ Object structure
 
 - `"activityType":` The type of activity shown in bot activity status.
 
-   - `(Options: "STREAMING", "WATCHING", "CUSTOM_STATUS", "PLAYING", "COMPETING")`
+  - `(Options: "STREAMING", "WATCHING", "CUSTOM_STATUS", "PLAYING", "COMPETING")`
 
-- `"activityMessage":` The message after activity type. 
-   - `(Options: Any string)`
+- `"activityMessage":` The message after activity type.
 
-- `"status":` The status displayed by the bot. 
-   - `(Options: "online", "idle", "invisible", "dnd")`
+  - `(Options: Any string)`
 
-- `"about":` The about message for any commands that display an about message. 
-   - `(Options: Any string)`
+- `"status":` The status displayed by the bot.
+
+  - `(Options: "online", "idle", "invisible", "dnd")`
+
+- `"about":` The about message for any commands that display an about message.
+  - `(Options: Any string)`
 
 Example config
+
 ```json
 {
-  "activityType": "WATCHING", 
+  "activityType": "WATCHING",
   "activityMessage": "the logs ⚡",
   "status": "dnd",
   "about": "Blackbox is an all-encompassing server management bot. Designed with server staff and user-friendliness in mind."
@@ -64,7 +67,7 @@ Example config
   (Uses ts-node-dev)
 
 ```
-yarn run start:dev
+yarn dev
 ```
 
 - Start locally
@@ -96,7 +99,7 @@ yarn run clean
 
 ![DiscordJS](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
-   
+
 #### Database
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
